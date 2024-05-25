@@ -35,7 +35,7 @@ app.get('/',async (req, res) => {
     });
 });
 app.get('/profile',async (req, res)=> {
-    console.log(req.user);
+   
     return res.render("profile",{
         current_page: 'profile',
        user :req.user,

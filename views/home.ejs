@@ -10,13 +10,13 @@
 
     <div class="container mx-auto px-4 py-10">
         <h1 class="text-slate-950 text-xl font-bold mb-6 text-center">.</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Latest blog -->
             <% if (blogs.length > 0) { %>
                 <% blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); %>
                 <% const latestBlog = blogs[0]; %>
                 <% const profileImageUrl = latestBlog.createdBy ? latestBlog.createdBy.profileImageURL : '/images/man.png'; %>
-                <div class="lg:col-span-1 lg:max-h-screen lg:overflow-hidden lg:sticky lg:top-0 bg-white border-2 border-gray-500 rounded-lg shadow-md overflow-auto max-h-[35em]">
+                <div class="lg:col-span-1 max-h-[40em] overflow-hidden bg-white border-2 border-gray-500 rounded-lg shadow-md">
                     <div class="relative w-full h-48 overflow-hidden">
                         <img class="w-full h-full object-cover filter blur-[2px]" src="<%= latestBlog.coverImageUrl %>" alt="blog image">
                         <div class="absolute inset-0 flex items-end p-5 bg-black bg-opacity-30">
@@ -53,11 +53,11 @@
             <% } %>
             
             <!-- Other blogs -->
-            <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <% blogs.slice(1).forEach(blog => { %>
                     <% const profileImageUrl = blog.createdBy ? blog.createdBy.profileImageURL : '/images/man.png'; %>
-                    <div class="max-h-[35em] bg-white border-2 border-gray-500 rounded-lg shadow-md overflow-hidden relative">
-                        <div class="relative w-full h-48 overflow-hidden">
+                    <div class="bg-white border-2 border-gray-500 rounded-lg shadow-md overflow-hidden relative max-h-[35em]">
+                        <div class="relative w-full h-40 overflow-hidden">
                             <img class="w-full h-full object-cover filter blur-[2px]" src="<%= blog.coverImageUrl %>" alt="blog image">
                             <div class="absolute inset-0 flex items-end p-5 bg-black bg-opacity-30">
                                 <div class="flex items-center">
