@@ -34,11 +34,11 @@ app.get('/',async (req, res) => {
         blogs: allBlogs,
     });
 });
-app.get('/profile',(req, res)=> {
-    console.log(req.user)
+app.get('/profile',async (req, res)=> {
+    console.log(req.user);
     return res.render("profile",{
         current_page: 'profile',
-        user: req.user ,
+       user :req.user,
     })
 });
 app.use("/user" , userRoute);
