@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+
+</head>
+
+<body class=" bg-gradient-to-r from-slate-900 to-sky-700 bg-[length:200%_200%] animate-gradient min-h-screen flex items-center justify-center">
+    <%- include("./partials/nav.ejs") %>
+   
+    <div class="container mx-auto mt-10 px-6">
+        <div class="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-2xl transform transition-all duration-500 hover:scale-105">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Create a New Blog </h2>
+            <div class="flex items-center mb-6">
+                <img src="<%= user.profileImage %>" alt="User Image" class="w-12 h-12 rounded-full mr-4">
+                <span class="font-semibold text-gray-800 text-lg"><%= user.fullname %></span>
+            </div>
+            <form action="/blog" method="post" enctype="multipart/form-data" >
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+                        Blog Title
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent" id="title" name="title" type="text" placeholder="Enter your blog title">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
+                        Content
+                    </label>
+                    <textarea class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent" id="body" name="body" rows="10" placeholder="Write your blog content here"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="coverImage" class="cursor-pointer flex items-center space-x-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M4 2a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zM3 4a1 1 0 011-1h12a1 1 0 011 1v3.236a1.5 1.5 0 01-.44.989l-4 4a1.5 1.5 0 01-2.12 0l-2-2a1.5 1.5 0 01-.44-.99V4H4zm0 6.764l2.44 2.44a1.5 1.5 0 002.12 0l4-4a1.5 1.5 0 00.44-.99V16a1 1 0 01-1 1H4a1 1 0 01-1-1V4h.001v6.764z"/>
+                        </svg>
+                        <span>Upload Image</span>
+                    </label>
+                    <input id="coverImage" name="coverImage" type="file" class="hidden">
+                     
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-gradient-to-r from-cyan-600 to-sky-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transform transition-transform duration-300 hover:scale-110" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

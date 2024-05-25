@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+<body class="bg-slate-700">
+    <%- include("./partials/nav.ejs") %>
+
+    <!-- Main Container -->
+    <div class="max-w-screen-xl mx-auto p-4">
+        
+        <!-- Profile Header -->
+        <div class="bg-slate-300 shadow-lg rounded-lg">
+            <div class="relative">
+                <!-- Cover Image -->
+                <div class="h-40 bg-cover bg-center" style="background-image: url('path-to-your-cover-image.jpg');"></div>
+                <!-- Profile Image -->
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                    <img class="h-24 w-24 rounded-full border-4 border-white" src="path-to-profile-image.jpg" alt="Profile Image">
+                </div>
+            </div>
+            <div class="text-center mt-16 px-4">
+                <h2 class="text-xl font-semibold">Assaf Rappaport</h2>
+                <p class="text-gray-600">VP of Customer Operations</p>
+                <p class="text-gray-600">San Francisco, CA USA</p>
+                <div class="mt-2 flex justify-center space-x-2">
+                    <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon1.png" alt="Icon"></button>
+                    <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon2.png" alt="Icon"></button>
+                    <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon3.png" alt="Icon"></button>
+                    <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon4.png" alt="Icon"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:flex lg:mt-8">
+            
+            <!-- Left Column -->
+            <div class="lg:w-3/4">
+                <!-- Overview -->
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-8 lg:mt-0">
+                    <h3 class="text-lg font-semibold mb-4">Overview</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-gray-700 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="text-gray-700 mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <!-- Other Tabs (Groups, Posts, Pages, etc.) could be similarly structured -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:w-1/4 lg:ml-4">
+                <!-- My Manager -->
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-8 lg:mt-0 mb-6 lg:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">My Manager</h3>
+                    <div class="flex items-center mb-4">
+                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager1-image.jpg" alt="Manager 1">
+                        <div>
+                            <p class="text-gray-700 font-semibold">Roy Reznik</p>
+                            <p class="text-gray-500 text-sm">Chief Executive Officer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager2-image.jpg" alt="Manager 2">
+                        <div>
+                            <p class="text-gray-700 font-semibold">James Botosh</p>
+                            <p class="text-gray-500 text-sm">Chief Operating Officer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager3-image.jpg" alt="Manager 3">
+                        <div>
+                            <p class="text-gray-700 font-semibold">Assaf Rappaport</p>
+                            <p class="text-gray-500 text-sm">VP of Customer Operations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Details -->
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-8 lg:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">Additional Details</h3>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Email:</span> yimon.costica@company.com</p>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Languages:</span> English, Spanish</p>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Preferred Gender Pronoun:</span> He / Him / His</p>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Nickname:</span> Costa</p>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Join Date:</span> 2 months ago, on 12/15/2020</p>
+                    <p class="text-gray-700 mb-2"><span class="font-semibold">Work History:</span> Petrovia.ai, Snap Inc., Pinterest</p>
+                    <p class="text-gray-700"><span class="font-semibold">Education:</span> Stanford University</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
