@@ -28,6 +28,7 @@ router.get('/AddBlog',(req, res)=> {
 });
 
 router.get('/:id', async (req, res) => {
+
   try {
     const blog = await Blog.findById(req.params.id).populate('createdBy');
     if (!blog) {

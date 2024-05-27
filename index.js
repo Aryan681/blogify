@@ -34,10 +34,32 @@ app.get('/',async (req, res) => {
         blogs: allBlogs,
     });
 });
-app.get('/profile',(req, res)=> {
+app.get('/profile',async (req, res)=> {
+   
     return res.render("profile",{
         current_page: 'profile',
-        user: req.user ,
+       user :req.user,
+    })
+});
+app.get('/contact',async (req, res)=> {
+   
+    return res.render("contact",{
+        current_page: 'contact',
+       user :req.user,
+    })
+});
+app.get('/about',async (req, res)=> {
+   
+    return res.render("about",{
+        current_page: 'about',
+       user :req.user,
+    })
+});
+app.get('/services',async (req, res)=> {
+   
+    return res.render("service",{
+        current_page: 'service',
+       user :req.user,
     })
 });
 app.use("/user" , userRoute);
