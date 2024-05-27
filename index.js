@@ -41,6 +41,13 @@ app.get('/profile',async (req, res)=> {
        user :req.user,
     })
 });
+app.get('/contact',async (req, res)=> {
+   
+    return res.render("contact",{
+        current_page: 'contact',
+       user :req.user,
+    })
+});
 app.use("/user" , userRoute);
 app.use("/blog" ,blogRoute);
 
