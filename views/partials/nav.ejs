@@ -15,17 +15,18 @@
       <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <!-- Profile Dropdown -->
         <% if (locals.user) { %>
-        <div class="relative">
-          <button id="profile-menu-button" class="flex items-center space-x-2 text-sm text-gray-500 rounded-full focus:outline-none dark:text-gray-400">
-            <img src="<%= user.profileImage %>" class="w-10 h-10 rounded-full" alt="Profile">
-            <i class=" hidden fas fa-chevron-down"></i>
-          </button>
-          <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-60 bg-white rounded-md shadow-lg py-1 dark:bg-gray-800">
-            <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300">Profile</a>
-            <a href="/settings" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300">Settings</a>
-            <a href="/user/logout" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300">Logout</a>
-          </div>
-        </div>
+       
+          <div class="relative">
+            <button id="profile-menu-button" class="flex items-center space-x-2 text-sm text-gray-500 rounded-full focus:outline-none dark:text-gray-400">
+              <img src="<%= user.profileImage %>" class="wz-10 h-10 rounded-full" alt="Profile">
+              <span class="hidden md:block"><%= user.fullname %></span> <!-- Display user's name -->
+              <i class="hidden fas fa-chevron-down"></i>
+            </button>
+            <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-60 bg-white rounded-md shadow-lg py-1 dark:bg-gray-800">
+              <p class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300"><%= user.email %></p> <!-- Display user's email -->
+              <a href="/user/logout" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300">Logout</a>
+            </div>
+          </div>>
         <% } %>
         <% if (!locals.user) { %>
         <a href="/user/signin" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Signin</a>

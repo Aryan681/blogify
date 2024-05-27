@@ -26,6 +26,8 @@
                 <p class="text-gray-600">VP of Customer Operations</p>
                 <p class="text-gray-600">San Francisco, CA USA</p>
                 <div class="mt-2 flex justify-center space-x-2">
+                    <!-- Edit Button -->
+                    <button class="p-2 bg-gray-100 rounded-full" id="editProfileButton">Edit</button>
                     <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon1.png" alt="Icon"></button>
                     <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon2.png" alt="Icon"></button>
                     <button class="p-2 bg-gray-100 rounded-full"><img src="path-to-icon3.png" alt="Icon"></button>
@@ -73,6 +75,29 @@
         </div>
     </div>
 
+    <!-- Modal for Edit Profile -->
+    <div id="editProfileModal" class="hidden fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-black opacity-50"></div>
+            <div class="bg-white rounded-lg p-8 mx-auto w-96">
+                <!-- Your form for editing profile details goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle modal and form interactions -->
+    <script>
+        const editButton = document.getElementById('editProfileButton');
+        const editModal = document.getElementById('editProfileModal');
+
+        editButton.addEventListener('click', () => {
+            editModal.classList.remove('hidden');
+        });
+
+        // Add JavaScript to handle form submission, profile picture upload, and social media linking
+    </script>
+
 </body>
 
 </html>
+
