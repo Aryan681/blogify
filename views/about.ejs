@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+        <style>
+            @media (min-width: 1024px) {
+                .fixed-latest-blog {
+                    position: sticky;
+                    top: 1rem;
+                }
+            }
+
+            /* Custom CSS */
+            /* Adjusting heading margins */
+            .content-heading {
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Styling the team member cards */
+            .team-member {
+                transition: all 0.3s;
+            }
+
+            .team-member:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        </style>
+</head>
+
+<body class=" bg-slate-700">
+    <header>
+        <%- include("./partials/nav.ejs") %>
+    </header>
+    <h1 class="text-slate-950 text-xl font-bold mb-6 text-center">.</h1>
+    <!-- main  -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-8">
+
+            <div class="sm:flex items-center max-w-screen-xl">
+                <div class="sm:w-1/2 p-10">
+                    <div class="image object-center text-center">
+                        <img src="https://i.imgur.com/WbQnbas.png">
+                    </div>
+                </div>
+                <div class="sm:w-1/2 p-5">
+                    <div class="text">
+                        <span class="text-gray-500 border-b-2 border-indigo-600 uppercase">About us</span>
+                        <h2 class="my-4 font-bold text-3xl  sm:text-4xl ">About <span class="text-indigo-600">
+                               Blogify</span>
+                        </h2>
+                        <p class="text-gray-700">
+                            Welcome to Blogify, your go-to destination for insightful articles, tips, and resources on
+                            all things
+                            blogging and content creation. Our mission is to empower bloggers of all levels with the
+                            knowledge and
+                            tools they need to succeed in the digital world.
+                            At Blogify, we believe in the power of storytelling and the impact it can have on
+                            individuals and
+                            communities. Whether you're a seasoned blogger looking to refine your craft or a newbie
+                            eager to
+                            embark on your blogging journey, we've got you covered.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team section -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-gray-800 content-heading">Meet Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Team member card -->
+                    <div class=" w-full bg-gray-50 p-6 rounded-lg shadow-md team-member flex flex-col items-center">
+                        <img src="path/to/your/image.jpg" alt="Aryan Singh" class="rounded-full w-24 h-24 object-cover object-center mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Aryan Singh</h3>
+                        <p class="text-gray-700 mt-2">Founder</p>
+                        <p class="text-gray-600 mt-4">Hi there! I'm the creator and founder of Blogify. With a passion for blogging and a vision
+                            to empower others in the digital world, I embarked on a journey to establish Blogify as a go-to platform
+                            for bloggers of all levels.</p>
+                    </div>
+                    
+                    <!-- Add more team members -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
