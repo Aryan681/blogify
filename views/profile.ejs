@@ -4,14 +4,15 @@
 <head>
     <%- include('partials/head.ejs') %>
 </head>
+
 <body class="bg-slate-700">
     <%- include("./partials/nav.ejs") %>
 
     <!-- Main Container -->
     <div class="max-w-screen-xl mx-auto p-4">
-        
+
         <!-- Profile Header -->
-        <div class="bg-slate-300 shadow-lg rounded-lg">
+        <div class="bg-slate-300 shadow-lg rounded-lg mb-4">
             <div class="relative">
                 <!-- Cover Image -->
                 <div class="h-40 bg-cover bg-center" style="background-image: url('path-to-your-cover-image.jpg');"></div>
@@ -35,49 +36,30 @@
 
         <!-- Main Content -->
         <div class="lg:flex lg:mt-8">
-            
+
             <!-- Left Column -->
-            <div class="lg:w-3/4">
+            <div class="lg:w-3/4 overflow-y-auto">
                 <!-- Overview -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8 lg:mt-0">
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                     <h3 class="text-lg font-semibold mb-4">Overview</h3>
                     <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <p class="text-gray-700 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <p class="text-gray-700 mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
-                <!-- Other Tabs (Groups, Posts, Pages, etc.) could be similarly structured -->
+                
+                <!-- My Blog -->
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
+                    <h3 class="text-lg font-semibold mb-4">My Blog</h3>
+                    <div class="overflow-y-auto max-h-[25rem]">
+                        <!-- Your blog posts go here -->
+                    </div>
+                </div>
             </div>
 
             <!-- Right Column -->
             <div class="lg:w-1/4 lg:ml-4">
-                <!-- My Manager -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8 lg:mt-0 mb-6 lg:mb-0">
-                    <h3 class="text-lg font-semibold mb-4">My Manager</h3>
-                    <div class="flex items-center mb-4">
-                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager1-image.jpg" alt="Manager 1">
-                        <div>
-                            <p class="text-gray-700 font-semibold">Roy Reznik</p>
-                            <p class="text-gray-500 text-sm">Chief Executive Officer</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager2-image.jpg" alt="Manager 2">
-                        <div>
-                            <p class="text-gray-700 font-semibold">James Botosh</p>
-                            <p class="text-gray-500 text-sm">Chief Operating Officer</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <img class="h-10 w-10 rounded-full mr-2" src="path-to-manager3-image.jpg" alt="Manager 3">
-                        <div>
-                            <p class="text-gray-700 font-semibold">Assaf Rappaport</p>
-                            <p class="text-gray-500 text-sm">VP of Customer Operations</p>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Additional Details -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-8 lg:mb-0">
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                     <h3 class="text-lg font-semibold mb-4">Additional Details</h3>
                     <p class="text-gray-700 mb-2"><span class="font-semibold">Email:</span> yimon.costica@company.com</p>
                     <p class="text-gray-700 mb-2"><span class="font-semibold">Languages:</span> English, Spanish</p>
@@ -92,4 +74,5 @@
     </div>
 
 </body>
+
 </html>
