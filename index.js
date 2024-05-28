@@ -1,11 +1,12 @@
 //imports
 const express = require ("express");
 const path = require ("path");
-
+const bodyParser = require('body-parser');
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser");
 const { checkForAuthenticationCookie } = require("./middleware/authentication");
 const Blog = require("./model/blog");
+const Contact = require("./model/contact");
 
 const userRoute = require("./routes/user");
 const blogRoute = require("./routes/blog");
@@ -24,6 +25,9 @@ app.use(express.static(path.resolve("./public")));
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
 app.use(checkForAuthenticationCookie("token"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 //routes
 app.get('/',async (req, res) => {
     const allBlogs = await Blog.find({}).populate('createdBy');
@@ -47,6 +51,18 @@ app.get('/contact',async (req, res)=> {
         current_page: 'contact',
        user :req.user,
     })
+});
+app.post('/contact', (req, res) => {
+    const myData = new Contact(req.body);
+    myData.save().then(() => {
+        res.render("contact", {
+            current_page: 'contact',
+            user: req.user,
+        });
+    }).catch((error) => {
+        console.error(error); // Log the error to understand what went wrong
+        res.status(400).send("item was not saved to the database");
+    });
 });
 app.get('/about',async (req, res)=> {
    
