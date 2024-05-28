@@ -71,13 +71,13 @@ app.get('/about',async (req, res)=> {
        user :req.user,
     })
 });
-app.get('/services',async (req, res)=> {
-   
-    return res.render("service",{
-        current_page: 'service',
-       user :req.user,
-    })
-});
+app.get('/services', async (req, res) => {
+    res.render('services', { 
+        current_page: 'services',
+        user: req.user,
+     });
+  });
+  
 app.use("/user" , userRoute);
 app.use("/blog" ,blogRoute);
 
